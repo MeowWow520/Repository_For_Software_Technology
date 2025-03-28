@@ -1,2 +1,11 @@
 # Repostitory_For_Software_Technology
-This is a union repostitory for software technology.
+This Is A Union Repostitory For Software Technology.
+---
+# Flie_Structure
+- main
+- - C++ 
+- - - 蓝桥杯
+- - - Universal-Online-Judge
+- - - Daliy-Edit
+- - C_Game_Make_Program
+- - Algorithm_Code
