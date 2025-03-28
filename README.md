@@ -2,10 +2,10 @@
 This Is A Union Repostitory For Software Technology.
 ---
 # Flie_Structure
---main
---- C++ 
------ 蓝桥杯
------ Universal-Online-Judge
------ Daliy-Edit
---- C_Game_Make_Program
---- Algorithm_Code
+- main
+- - C++ 
+- - - 蓝桥杯
+- - - Universal-Online-Judge
+- - - Daliy-Edit
+- - C_Game_Make_Program
+- - Algorithm_Code
