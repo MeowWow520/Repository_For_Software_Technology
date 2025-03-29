@@ -7,6 +7,6 @@ This Is A Union Repostitory For Software Technology.
     - LanQiao
     - Universal-Online-Judge
     - Daliy-Edit
-  - C_Game_Make_Program
+  - C++_Game_Maker
   - Algorithm_Code
 ## OnGoing
