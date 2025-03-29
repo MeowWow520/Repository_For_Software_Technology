@@ -3,8 +3,8 @@ This Is A Union Repostitory For Software Technology.
 ---
 # Flie_Structure
 - main
-  - C++ 
-    - 蓝桥杯
+  - C++_Code
+    - LanQiao
     - Universal-Online-Judge
     - Daliy-Edit
   - C_Game_Make_Program
