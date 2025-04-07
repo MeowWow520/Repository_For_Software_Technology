@@ -9,7 +9,7 @@ const int Mod = 998244353;
  * Problem:
  * Define a function f(x):
  * - f(x) = 2 * x * f(x-6)  (x > 10)
- * - f(x) = x * (x - 1)      (x ¡Ü 10)
+ * - f(x) = x * (x - 1)      (x Â¡Ãœ 10)
  * Given an integer n, compute f(n) modulo 998244353.
  *
  * ------Input Format------
