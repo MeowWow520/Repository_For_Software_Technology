@@ -12,8 +12,8 @@ using namespace std;
 
 /** Gomoku Game
  * ------Problem Description------
- * Two friends play Gomoku on a 5กม5 board with rules:
- * 1. Board: 5กม5 grid, 25 cells.
+ * Two friends play Gomoku on a 5ยกร5 board with rules:
+ * 1. Board: 5ยกร5 grid, 25 cells.
  * 2. Pieces: White (Xiao Lan) and Black (Xiao Qiao).
  * 3. White moves first.
  * 4. Players alternate turns.
