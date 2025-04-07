@@ -8,6 +8,7 @@ const ll mod = 1e9 + 7;
 const ll N = 1e6 + 10;
 using namespace std;
 
+// Translated By DeepSeek V3 From Chinese Version
 
 /** ------Depth-First Search (DFS)------
  *  Using recursion to solve permutation problems
