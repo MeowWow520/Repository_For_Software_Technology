@@ -15,11 +15,11 @@ using namespace std;
  * Count Squares
  *
  * ------Problem Description------
- * Given an N¡ÁN grid of points, count the number of distinct ways to select 4 points forming a square.
+ * Given an NÂ¡ÃN grid of points, count the number of distinct ways to select 4 points forming a square.
  * Output the result modulo 1e9+7.
  *
  * ------Input------
- * An integer N (2 ¡Ü N ¡Ü 1e6).
+ * An integer N (2 Â¡Ãœ N Â¡Ãœ 1e6).
  *
  * ------Output------
  * The number of squares modulo 1e9+7.
@@ -27,7 +27,7 @@ using namespace std;
 
  /**
   * ------Approach------
-  * For an n¡Án grid:
+  * For an nÂ¡Ãn grid:
   * - The total squares include contributions from all possible sub-squares.
   * - Summation and parity adjustments are needed for overlapping counts.
   */
