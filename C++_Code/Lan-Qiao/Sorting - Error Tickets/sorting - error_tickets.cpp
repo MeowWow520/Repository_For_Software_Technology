@@ -19,7 +19,7 @@ using namespace std;
  *
  * ------Input Format------
  * Input starts with an integer N (N < 100) for the number of data lines, followed by N lines.
- * Each line contains space-separated integers (¡Ü100 per line, each ¡Ü1e5).
+ * Each line contains space-separated integers (Â¡Ãœ100 per line, each Â¡Ãœ1e5).
  *
  * ------Output Format------
  * Output two integers: m (missing ID) and n (duplicated ID), separated by a space.
