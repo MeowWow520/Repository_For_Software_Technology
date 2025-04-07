@@ -21,7 +21,7 @@ When comparing two numbers:
 - If both counts and values are equal, the numbers are considered equal.
 
 Task:
-Given n numbers ¦Á1, ¦Á2, ..., ¦Án, sort them in ascending order according to Blue Bridge Kingdom's rules and output the result.
+Given n numbers Â¦Ã1, Â¦Ã2, ..., Â¦Ãn, sort them in ascending order according to Blue Bridge Kingdom's rules and output the result.
 */
 
 int fb[10] = { 1, 0, 0, 0, 1, 0, 1, 0, 2, 1 };
