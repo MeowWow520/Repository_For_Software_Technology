@@ -9,9 +9,11 @@ In `Algorithm_Code` file, the name of cpp or c will be named by `Algorithm` + `P
 Such as `Permutation - N Queens Problem.cpp`, which named by permutation algorithm and a problem named N Queen Problem.
 
 ## File Structures
-In there, file will have two versions:
+In there, file will have two versions. 
 - Chinese version
 - English version
-**tips**: some english version be translated by myself, but some of them translated by **DeepSeek R1**
+## Tips:
+- some english version be translated by myself, but some of them translated by **DeepSeek R1**
+- When the content of file be translated by ai agents, I will note it at the title
 
-##OnGoing  
+## OnGoing  
