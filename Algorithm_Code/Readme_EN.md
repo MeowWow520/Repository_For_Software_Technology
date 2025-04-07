@@ -14,6 +14,6 @@ In there, file will have two versions.
 - English version
 ## Tips:
 - some english version be translated by myself, but some of them translated by **DeepSeek R1**
-- When the content of file be translated by ai agents, I will note it at the title
+- When the content of file be translated by ai agents, I will note it at the title. Otherwise, it be translated by myself
 
 ## OnGoing  
