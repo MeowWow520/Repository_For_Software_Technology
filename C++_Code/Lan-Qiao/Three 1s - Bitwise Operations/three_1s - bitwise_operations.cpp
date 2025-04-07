@@ -5,6 +5,9 @@ const ll mod = 1e9 + 7;
 const ll N = 1e6 + 10;
 using namespace std;
 
+// Translated By DeepSeek R1 From Chinese Version
+
+
 /** Three 1s - Bitwise Operations
  *  ------Problem Description------
  *  A number is considered valid if its binary representation has exactly 3 bits set to 1.
