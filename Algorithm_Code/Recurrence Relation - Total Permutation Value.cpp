@@ -5,6 +5,8 @@ typedef long long ll;
 const ll mod = 998244353;
 using namespace std;
 
+// Translated By DeepSeek V3 From Chinese Version
+
 
 // Recurrence Relation - Total Permutation Value
 // Idea: Explore the relationship between the value of the n-th permutation and the (n-1)-th permutation
