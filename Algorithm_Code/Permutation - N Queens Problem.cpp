@@ -7,10 +7,12 @@ const ll mod = 1e9 + 7;
 const ll N = 1e6 + 10;
 using namespace std;
 
+// Translated By DeepSeek V3 From Chinese Version
+
 /**
  * N-Queens Problem
  * ------Problem Description------
- * Place N queens on an N×N chessboard such that no two queens attack each other.
+ * Place N queens on an N隆脕N chessboard such that no two queens attack each other.
  * This means no two queens can be in the same row, same column, or on the same diagonal (45-degree lines relative to the board borders).
  * Your task is to determine the number of valid placements for a given N.
  * 
@@ -51,7 +53,7 @@ int chk(int c) {
  * k: Size of the board (copy of n).
  * 
  * For a detailed DFS explanation, refer to:
- * https://github.com/MeowWow520/Repostitory_For_Software_Technology/blob/main/Algorithm_Code/dfs深度优先算法-排列.cpp 
+ * https://github.com/MeowWow520/Repostitory_For_Software_Technology/blob/main/Algorithm_Code/dfs脡卯露脠脫脜脧脠脣茫路篓-脜脜脕脨.cpp 
  */
 void dfs(int pos, int k) {
     if (pos > k) {
