@@ -6,10 +6,10 @@ This Is A Union Repostitory For Software Technology.
 ---
 # Flie_Structure
 - main
+  - Algorithm_Code
   - C++_Code
     - Lan-Qiao
     - Universal-Online-Judge
     - Daliy-Edit
   - C++_Game_Maker
-  - Algorithm_Code
 ## OnGoing
