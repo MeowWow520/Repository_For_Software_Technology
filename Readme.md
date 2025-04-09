@@ -1,6 +1,6 @@
 # Repostitory_For_Software_Technology
 
-[中文文档](./Readme_CN.md) | [English Document](./Readme_EN.md)
+[中文文档](./Readme_CN.md) | [English Document](./Readme.md)
 
 This Is A Union Repostitory For Software Technology.
 ---
