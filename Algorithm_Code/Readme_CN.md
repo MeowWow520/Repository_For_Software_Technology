@@ -1,7 +1,10 @@
 # 算法代码库  
 
+[中文文档](./Readme_CN.md) | [English Document](./Readme_EN.md)
+
 **由DeepSeek R1翻译自英文版**
----  
+
+---
 
 ## 这是什么？  
 本文件用于存放我在学习**算法**过程中编写的代码。  
