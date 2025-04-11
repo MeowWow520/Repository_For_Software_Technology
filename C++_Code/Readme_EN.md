@@ -1,5 +1,7 @@
 # C++_Code
 
+[中文文档](./Readme_CN.md) | [English Document](./Readme_EN.md)
+
 ---
 
 ## What Is This？
