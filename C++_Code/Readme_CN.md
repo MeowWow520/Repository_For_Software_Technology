@@ -1,6 +1,9 @@
 # C++代码库  
 
+[中文文档](./Readme_CN.md) | [English Document](./Readme_EN.md)
+
 **由DeepSeek R1翻译自英文版**
+
 ---  
 
 ## 这是什么？  
