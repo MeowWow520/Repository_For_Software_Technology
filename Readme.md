@@ -29,4 +29,4 @@ Folder names follow one of three patterns cyclically:
 **Files**:  
 File names use **snake_case**: Replace spaces with `_`, and keep all letters lowercase except for proper nouns (applies to English versions).  
 
-## Continuously updating...
+## On Going
