@@ -5,6 +5,9 @@ const int N = 1e6 + 10;
 using namespace std;
 
 
+// Translated By DeepSeek R1 From Chinese Version
+
+
 /** Xiaolan Who Loves Sugar
  *  ------Problem Description------
  *  Xiaolan is a child who loves sweets, but her mother strictly requires that her daily sugar intake does not exceed h.
