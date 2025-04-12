@@ -8,14 +8,14 @@ using namespace std;
 /** Xiaolan Who Loves Sugar
  *  ------Problem Description------
  *  Xiaolan is a child who loves sweets, but her mother strictly requires that her daily sugar intake does not exceed h.
- *  There are n boxes of candies in front of Xiaolan, and an array ¦Á of length n.
- *  ¦Á[i] represents the sugar content of the i-th box. Xiaolan can choose to remove one or a continuous segment of candies once, or not remove any.
+ *  There are n boxes of candies in front of Xiaolan, and an array Â¦Ã of length n.
+ *  Â¦Ã[i] represents the sugar content of the i-th box. Xiaolan can choose to remove one or a continuous segment of candies once, or not remove any.
  *  After that, she eats all the remaining candies.
  *  Gluttonous Xiaolan wants to consume as much sugar as possible. Please help her calculate the maximum sugar intake she can achieve.
  * 
  *  ------Input Format------
  *  The input consists of two lines. The first line contains two integers n and h, representing the number of candies and the maximum allowed sugar intake.
- *  The second line contains n non-negative integers ¦Á1, ¦Á2, ..., ¦Án, representing the sugar content of each box.
+ *  The second line contains n non-negative integers Â¦Ã1, Â¦Ã2, ..., Â¦Ãn, representing the sugar content of each box.
  * 
  *  ------Output Format------
  *  Output a single integer representing the maximum sugar Xiaolan can consume.
