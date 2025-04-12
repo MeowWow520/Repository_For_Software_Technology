@@ -11,6 +11,7 @@ const int N = 1e6 + 10;
 using namespace std;
 
 
+
 /**
  *  ------介绍------
  *  运行时会生成一个空白窗口
