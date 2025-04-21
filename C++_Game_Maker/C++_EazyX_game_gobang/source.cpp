@@ -6,23 +6,23 @@
 #define Genuis "Jerry Chen"
 using namespace std;
 
-// Êı¾İ¶¨Òå
+// æ•°æ®å®šä¹‰
 bool Is_Project_Work = true;
 const int ttt_length = 3;
-const int player_1 = 1; // Ô²Íæ¼Ò
-const int player_2 = 2; // ²æÍæ¼Ò
-const int player_none = 0; // ¿ÕÎ»ÖÃ
+const int player_1 = 1; // åœ†ç©å®¶
+const int player_2 = 2; // å‰ç©å®¶
+const int player_none = 0; // ç©ºä½ç½®
 const int Windows_length_X = 600;
 const int Windows_length_Y = 600;
 const int circle_r = 75;
-int tic_tac_toe[ttt_length][ttt_length] = { {0, 0, 0}, {0, 0, 0}, {0, 0, 0} }; // ÕâÀïÊÇ×ªÖÃµÄÊı¾İ
+int tic_tac_toe[ttt_length][ttt_length] = { {0, 0, 0}, {0, 0, 0}, {0, 0, 0} }; // è¿™é‡Œæ˜¯è½¬ç½®çš„æ•°æ®
 int player_current_site = 1;
 TCHAR player_current_site_str = _T('o');
 
-// º¯Êı¶¨Òå - Êı¾İ´¦Àí
-// Ê¤¸ºÅĞ¶Ï
+// å‡½æ•°å®šä¹‰ - æ•°æ®å¤„ç†
+// èƒœè´Ÿåˆ¤æ–­
 int Chack_Win(int player_site) {
-	// ÅĞ¶ÏºáÏò
+	// åˆ¤æ–­æ¨ªå‘
 	for (int i = 0; i <= 2; i++) {
 		int count = 0;
 		for (int j = 0; j <= 2; j++) {
@@ -30,7 +30,7 @@ int Chack_Win(int player_site) {
 		}
 		if (count == 3) return 1;
 	}
-	// ÅĞ¶Ï×İÏò
+	// åˆ¤æ–­çºµå‘
 	for (int i = 0; i <= 2; i++) {
 		int count = 0;
 		for (int j = 0; j <= 2; j++) {
@@ -38,20 +38,20 @@ int Chack_Win(int player_site) {
 		}
 		if (count == 3) return 1;
 	}
-	// ÅĞ¶ÏÖ÷¶Ô½Ç 
+	// åˆ¤æ–­ä¸»å¯¹è§’ 
 	int count = 0;
 	for (int i = 0; i <= 2; i++) {
 		if (tic_tac_toe[i][i] == player_site) count++;
 		if (count == 3) return 1;
 	}
-	// ÅĞ¶Ï¸±¶Ô½Ç 
+	// åˆ¤æ–­å‰¯å¯¹è§’ 
 	count = 0;
 	for (int i = 0; i <= 2; i++) {
 		if (tic_tac_toe[i][2 - i] == player_site) count++;
 		if (count == 3) return 1;
 	}
 }
-// Æ½¾ÖÅĞ¶Ï
+// å¹³å±€åˆ¤æ–­
 int Chack_Draw() {
 	int count_site_number = 0;
 	for (int i = 0; i <= 2; i++) {
@@ -59,31 +59,31 @@ int Chack_Draw() {
 	}
 	if (count_site_number == 13) return 1;
 }
-// º¯Êı¶¨Òå - »æÖÆÍ¼ĞÎ
-// »æÖÆÖ±Ïß
+// å‡½æ•°å®šä¹‰ - ç»˜åˆ¶å›¾å½¢
+// ç»˜åˆ¶ç›´çº¿
 void Draw_Line() {
-	// ¶¨Òå×ø±ê
-	// µÚ 1 ÌõÖ±Ïß
+	// å®šä¹‰åæ ‡
+	// ç¬¬ 1 æ¡ç›´çº¿
 	int line_1_XY_Begin[2] = { Windows_length_X / 3, 0 };
 	int line_1_XY_End[2] = { Windows_length_X / 3, Windows_length_Y };
-	// µÚ 2 ÌõÖ±Ïß
+	// ç¬¬ 2 æ¡ç›´çº¿
 	int line_2_XY_Begin[2] = { (Windows_length_X / 3) * 2, 0 };
 	int line_2_XY_End[2] = { (Windows_length_X / 3) * 2, Windows_length_Y };
-	// µÚ 3 ÌõÖ±Ïß
+	// ç¬¬ 3 æ¡ç›´çº¿
 	int line_3_XY_Begin[2] = { 0, Windows_length_Y / 3 };
 	int line_3_XY_End[2] = { Windows_length_X,  Windows_length_Y / 3 };
-	// µÚ 4 ÌõÖ±Ïß
+	// ç¬¬ 4 æ¡ç›´çº¿
 	int line_4_XY_Begin[2] = { 0, (Windows_length_Y / 3) * 2 };
 	int line_4_XY_End[2] = { Windows_length_X, (Windows_length_Y / 3) * 2 };
 
-	// »æÖÆ
+	// ç»˜åˆ¶
 	line(line_1_XY_Begin[0], line_1_XY_Begin[1], line_1_XY_End[0], line_1_XY_End[1]);
 	line(line_2_XY_Begin[0], line_2_XY_Begin[1], line_2_XY_End[0], line_2_XY_End[1]);
 	line(line_3_XY_Begin[0], line_3_XY_Begin[1], line_3_XY_End[0], line_3_XY_End[1]);
 	line(line_4_XY_Begin[0], line_4_XY_Begin[1], line_4_XY_End[0], line_4_XY_End[1]);
 
 };
-// »æÖÆÔ²
+// ç»˜åˆ¶åœ†
 void Draw_Circle() {
 	const int site = 1;
 	for (int x = 0; x <= 2; x++) {
@@ -96,7 +96,7 @@ void Draw_Circle() {
 		}
 	}
 }
-// »æÖÆ²æ
+// ç»˜åˆ¶å‰
 void Draw_X() {
 	const int site = 2;
 	int space = 25;
@@ -104,13 +104,13 @@ void Draw_X() {
 	for (int x = 0; x <= 2; x++) {
 		for (int y = 0; y <= 2; y++) {
 			if (tic_tac_toe[x][y] == site) {
-				// ¶¨Òå×ø±ê
-				// µÚ 1 ÌõÖ±Ïß
+				// å®šä¹‰åæ ‡
+				// ç¬¬ 1 æ¡ç›´çº¿
 				int line_x_1 = 200 * (x + 1) - line_length_xy - space;
 				int line_y_1 = 200 * (y + 1) - line_length_xy - space;
 				int line_1_XY_Begin[2] = { line_x_1, line_y_1 };
 				int line_1_XY_End[2] = { line_x_1 + line_length_xy, line_y_1 + line_length_xy };
-				// µÚ 2 ÌõÖ±Ïß
+				// ç¬¬ 2 æ¡ç›´çº¿
 				int line_x_2 = 200 * (x + 1) - space;
 				int line_y_2 = 200 * (y + 1) - line_length_xy - space;
 				int line_2_XY_Begin[2] = { line_x_2, line_y_2 };
@@ -122,38 +122,38 @@ void Draw_X() {
 		}
 	}
 }
-// »æÖÆÌáÊ¾ĞÅÏ¢
+// ç»˜åˆ¶æç¤ºä¿¡æ¯
 void Draw_Tips() {
 	static TCHAR str[64];
-	_stprintf_s(str, _T("µ±Ç°Æå×ÓÀàĞÍ£º %c"), player_current_site_str);
+	_stprintf_s(str, _T("å½“å‰æ£‹å­ç±»å‹ï¼š %c"), player_current_site_str);
 	settextcolor(RGB(225, 175, 45));
 	outtextxy(0, 0, str);
 }
 
 
 int main() {
-	// ³õÊ¼»¯´°¿Ú
+	// åˆå§‹åŒ–çª—å£
 	initgraph(Windows_length_X, Windows_length_Y, NULL);
-	// Ö÷Ñ­»·
+	// ä¸»å¾ªç¯
 	BeginBatchDraw();
 	while (Is_Project_Work) {
 		ExMessage Message_Pick;
-		// ¶ÁÈ¡²Ù×÷
+		// è¯»å–æ“ä½œ
 		int x = 10000, y = 10000;
 		while (peekmessage(&Message_Pick)) {
 			if (Message_Pick.message == WM_LBUTTONDOWN) {
 				x = Message_Pick.x;
 				y = Message_Pick.y;
 		
-			// ´¦ÀíÊı¾İ
+			// å¤„ç†æ•°æ®
 				int index_x = x / 200;
 				int index_y = y / 200;
 				if (tic_tac_toe[index_x][index_y] == 0) {
 					tic_tac_toe[index_x][index_y] = player_current_site;
-					// ¼ì²é¶Ô¾ÖÇé¿ö
-					if (Chack_Draw() == 1) MessageBox(GetHWnd(), _T("ÎŞÍæ¼Ò»ñÊ¤"), _T("ÓÎÏ·½áÊø"), MB_OK);
-					if (Chack_Win(player_current_site) == 1) MessageBox(GetHWnd(), _T("Íæ¼Ò»ñÊ¤"), _T("ÓÎÏ·½áÊø"), MB_OK);
-					// ½»»»Æå×ÓÀàĞÍ
+					// æ£€æŸ¥å¯¹å±€æƒ…å†µ
+					if (Chack_Draw() == 1) MessageBox(GetHWnd(), _T("æ— ç©å®¶è·èƒœ"), _T("æ¸¸æˆç»“æŸ"), MB_OK);
+					if (Chack_Win(player_current_site) == 1) MessageBox(GetHWnd(), _T("ç©å®¶è·èƒœ"), _T("æ¸¸æˆç»“æŸ"), MB_OK);
+					// äº¤æ¢æ£‹å­ç±»å‹
 					if (player_current_site == 2) {
 						player_current_site = 1;
 						player_current_site_str = _T('o');
@@ -165,7 +165,7 @@ int main() {
 				}
 			}
 		}
-		// »æÖÆ»­Ãæ
+		// ç»˜åˆ¶ç”»é¢
 		cleardevice();
 		Draw_Tips();
 		Draw_Line();
