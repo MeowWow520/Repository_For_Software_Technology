@@ -1,9 +1,15 @@
 # MeowWow520's Tinker Server 
 ---
 
-**Using Mod Loader** : **Forge**    
-**Using Server Manager Client** : **MCDReforged**    
-**Server Seting*** : 
+**Using Mod Loader** : *Forge*    
+**Using Server Manager Client** : *MCDReforged*
+
+## Server Seting 
+difficulty = **hard**   
+gamemode = **survival**   
+max-players = **5**   
+online-mode = **true**   
+
 ## Server Mods 
 
 - Quack
@@ -27,3 +33,5 @@
 - Tips
 - Loot Beams
 - WTHIT
+
+# Ongoing
