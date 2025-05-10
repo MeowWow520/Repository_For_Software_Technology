@@ -10,9 +10,9 @@ int Site[3][3] = { {0,0,0},{0,0,0},{0,0,0} };
 
 
 
-// »æÖÆ»­Ãæ
+// ç»˜åˆ¶ç”»é¢
 void DrawLine() {
-	// µÚ 1, 2, 3, 4 ÌõÖ±Ïß
+	// ç¬¬ 1, 2, 3, 4 æ¡ç›´çº¿
 	int line_1_XY_Begin[2] = { 600 / 3, 0 };
 	int line_1_XY_End[2] = { 600 / 3, 600 };
 	int line_2_XY_Begin[2] = { (600 / 3) * 2, 0 };
@@ -21,7 +21,7 @@ void DrawLine() {
 	int line_3_XY_End[2] = { 600,  600 / 3 };
 	int line_4_XY_Begin[2] = { 0, (600 / 3) * 2 };
 	int line_4_XY_End[2] = { 600, (600 / 3) * 2 };
-	// »æÖÆ
+	// ç»˜åˆ¶
 	line(line_1_XY_Begin[0], line_1_XY_Begin[1], line_1_XY_End[0], line_1_XY_End[1]);
 	line(line_2_XY_Begin[0], line_2_XY_Begin[1], line_2_XY_End[0], line_2_XY_End[1]);
 	line(line_3_XY_Begin[0], line_3_XY_Begin[1], line_3_XY_End[0], line_3_XY_End[1]);
@@ -47,8 +47,8 @@ void DrawX() {
 	for (int x = 0; x <= 2; x++) {
 		for (int y = 0; y <= 2; y++) {
 			if (Site[x][y] == site) {
-				// ¶¨Òå×ø±ê
-				// µÚ 1, 2 ÌõÖ±Ïß
+				// å®šä¹‰åæ ‡
+				// ç¬¬ 1, 2 æ¡ç›´çº¿
 				int line_x_1 = 200 * (x + 1) - line_length_xy - space;
 				int line_y_1 = 200 * (y + 1) - line_length_xy - space;
 				int line_1_XY_Begin[2] = { line_x_1, line_y_1 };
@@ -57,7 +57,7 @@ void DrawX() {
 				int line_y_2 = 200 * (y + 1) - line_length_xy - space;
 				int line_2_XY_Begin[2] = { line_x_2, line_y_2 };
 				int line_2_XY_End[2] = { line_x_2 - line_length_xy, line_y_2 + line_length_xy };
-				// »æÖÆ
+				// ç»˜åˆ¶
 				line(line_1_XY_Begin[0], line_1_XY_Begin[1], line_1_XY_End[0], line_1_XY_End[1]);
 				line(line_2_XY_Begin[0], line_2_XY_Begin[1], line_2_XY_End[0], line_2_XY_End[1]);
 			}
@@ -65,7 +65,7 @@ void DrawX() {
 	}
 }
 
-// ÅĞ¶ÏÂä×Ó
+// åˆ¤æ–­è½å­
 void IsThereDown() {
 	if (Site[x / 200][y / 200] == 0) {
 		Site[x / 200][y / 200] = CurrentPlayerType;
@@ -75,7 +75,7 @@ void IsThereDown() {
 void ChackWin(int CurrentPlayerType) {
 	for (int i = 1; i <= 2; i++) 
 }
-// Æ½¾ÖÅĞ¶Ï
+// å¹³å±€åˆ¤æ–­
 bool ChackDraw() {
 	for (int i = 0; i <= 2; i++) {
 		for (int j = 0; j <= 2; j++) {
@@ -86,14 +86,14 @@ bool ChackDraw() {
 }
 
 int main() {
-	// ³õÊ¼»¯
+	// åˆå§‹åŒ–
 	initgraph(600, 600, NULL);
 
 	// Main
 	BeginBatchDraw();
 	while (IsGoing) {
 		ExMessage Message_Pick;
-		// ¶ÁÈ¡²Ù×÷
+		// è¯»å–æ“ä½œ
 		while (peekmessage(&Message_Pick)) {
 			if (Message_Pick.message == WM_LBUTTONDOWN) {
 				x = Message_Pick.x;
@@ -102,17 +102,17 @@ int main() {
 				IsThereDown();
 			}
 		}
-		/** ´¦ÀíÊı¾İ
-		 *	- Õâ¸öµØ·½ÄÜÂä×ÓÂğ£¿ !! in Line 001
-		 *    - ÄÜ£º Âä×Ó²¢¸ü¸ÄÍæ¼ÒµÄÆå×ÓÀàĞÍ
-		 *    - ²»ÄÜ£º ²»×ö±ä»¯
-		 *  - Íæ¼ÒÓ®ÁËÂğ£¿
-		 *  - ÓĞÃ»ÓĞÆ½¾Ö£¿
+		/** å¤„ç†æ•°æ®
+		 *	- è¿™ä¸ªåœ°æ–¹èƒ½è½å­å—ï¼Ÿ !! in Line 001
+		 *    - èƒ½ï¼š è½å­å¹¶æ›´æ”¹ç©å®¶çš„æ£‹å­ç±»å‹
+		 *    - ä¸èƒ½ï¼š ä¸åšå˜åŒ–
+		 *  - ç©å®¶èµ¢äº†å—ï¼Ÿ
+		 *  - æœ‰æ²¡æœ‰å¹³å±€ï¼Ÿ
 		 */
 		if (ChackDraw()) {
-			// Æ½¾Ö
+			// å¹³å±€
 		}
-		// »æÖÆ»­Ãæ
+		// ç»˜åˆ¶ç”»é¢
 		DrawLine();
 		DrawCircle();
 		DrawX();
