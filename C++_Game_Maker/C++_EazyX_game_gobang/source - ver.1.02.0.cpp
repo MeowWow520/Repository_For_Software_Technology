@@ -11,9 +11,9 @@ int ChackWinCnt = 0, ChackDrawCnt = 0;
 TCHAR PlayerCurrentSiteStr = _T('o');
 
 
-// »æÖÆ»­Ãæ
+// ç»˜åˆ¶ç”»é¢
 void DrawLine() {
-	// µÚ 1, 2, 3, 4 ÌõÖ±Ïß
+	// ç¬¬ 1, 2, 3, 4 æ¡ç›´çº¿
 	int line_1_XY_Begin[2] = { 600 / 3, 0 };
 	int line_1_XY_End[2] = { 600 / 3, 600 };
 	int line_2_XY_Begin[2] = { (600 / 3) * 2, 0 };
@@ -22,7 +22,7 @@ void DrawLine() {
 	int line_3_XY_End[2] = { 600,  600 / 3 };
 	int line_4_XY_Begin[2] = { 0, (600 / 3) * 2 };
 	int line_4_XY_End[2] = { 600, (600 / 3) * 2 };
-	// »æÖÆ
+	// ç»˜åˆ¶
 	line(line_1_XY_Begin[0], line_1_XY_Begin[1], line_1_XY_End[0], line_1_XY_End[1]);
 	line(line_2_XY_Begin[0], line_2_XY_Begin[1], line_2_XY_End[0], line_2_XY_End[1]);
 	line(line_3_XY_Begin[0], line_3_XY_Begin[1], line_3_XY_End[0], line_3_XY_End[1]);
@@ -48,8 +48,8 @@ void DrawX() {
 	for (int x = 0; x <= 2; x++) {
 		for (int y = 0; y <= 2; y++) {
 			if (Site[x][y] == site) {
-				// ¶¨Òå×ø±ê
-				// µÚ 1, 2 ÌõÖ±Ïß
+				// å®šä¹‰åæ ‡
+				// ç¬¬ 1, 2 æ¡ç›´çº¿
 				int line_x_1 = 200 * (x + 1) - line_length_xy - space;
 				int line_y_1 = 200 * (y + 1) - line_length_xy - space;
 				int line_1_XY_Begin[2] = { line_x_1, line_y_1 };
@@ -58,7 +58,7 @@ void DrawX() {
 				int line_y_2 = 200 * (y + 1) - line_length_xy - space;
 				int line_2_XY_Begin[2] = { line_x_2, line_y_2 };
 				int line_2_XY_End[2] = { line_x_2 - line_length_xy, line_y_2 + line_length_xy };
-				// »æÖÆ
+				// ç»˜åˆ¶
 				line(line_1_XY_Begin[0], line_1_XY_Begin[1], line_1_XY_End[0], line_1_XY_End[1]);
 				line(line_2_XY_Begin[0], line_2_XY_Begin[1], line_2_XY_End[0], line_2_XY_End[1]);
 			}
@@ -67,13 +67,13 @@ void DrawX() {
 }
 void Draw_Tips() {
 	static TCHAR str[64];
-	// PlayerCurrentSiteStr µÄ×ª»¯ÔÚ void IsThereDown()
-	_stprintf_s(str, _T("µ±Ç°Æå×ÓÀàĞÍ£º %c"), PlayerCurrentSiteStr);
+	// PlayerCurrentSiteStr çš„è½¬åŒ–åœ¨ void IsThereDown()
+	_stprintf_s(str, _T("å½“å‰æ£‹å­ç±»å‹ï¼š %c"), PlayerCurrentSiteStr);
 	settextcolor(RGB(225, 175, 45));
 	outtextxy(0, 0, str);
 }
 
-// ÅĞ¶ÏÂä×Ó
+// åˆ¤æ–­è½å­
 void IsThereDown() {
 	if (Site[x / 200][y / 200] == 0) {
 		Site[x / 200][y / 200] = CurrentPlayerType;
@@ -82,7 +82,7 @@ void IsThereDown() {
 		else PlayerCurrentSiteStr = _T('x');
 	}
 }
-// Ê¤¸ºÅĞ¶Ï
+// èƒœè´Ÿåˆ¤æ–­
 bool ChackWin(int CurrentPlayerType) {
 	int WinAddNumber = -1 * (CurrentPlayerType * 3);
 	int temp03 = 0, temp04 = 0;
@@ -96,7 +96,7 @@ bool ChackWin(int CurrentPlayerType) {
 	}
 	return false;
 }
-// Æ½¾ÖÅĞ¶Ï
+// å¹³å±€åˆ¤æ–­
 bool ChackDraw() {
 	for (int i = 0; i <= 2; i++) {
 		for (int j = 0; j <= 2; j++) {
@@ -107,14 +107,14 @@ bool ChackDraw() {
 }
 
 int main() {
-	// ³õÊ¼»¯
+	// åˆå§‹åŒ–
 	initgraph(600, 600, NULL);
 
 	// Main
 	BeginBatchDraw();
 	while (IsGoing) {
 		ExMessage Message_Pick;
-		// ¶ÁÈ¡²Ù×÷
+		// è¯»å–æ“ä½œ
 		while (peekmessage(&Message_Pick)) {
 			if (Message_Pick.message == WM_LBUTTONDOWN) {
 				x = Message_Pick.x;
@@ -124,26 +124,26 @@ int main() {
 			}
 		}
 
-		/** ´¦ÀíÊı¾İ
-		 *	- Õâ¸öµØ·½ÄÜÂä×ÓÂğ£¿ !! in Line 001
-		 *    - ÄÜ£º Âä×Ó²¢¸ü¸ÄÍæ¼ÒµÄÆå×ÓÀàĞÍ
-		 *    - ²»ÄÜ£º ²»×ö±ä»¯
-		 *  - Íæ¼ÒÓ®ÁËÂğ£¿
-		 *  - ÓĞÃ»ÓĞÆ½¾Ö£¿
+		/** å¤„ç†æ•°æ®
+		 *	- è¿™ä¸ªåœ°æ–¹èƒ½è½å­å—ï¼Ÿ !! in Line 001
+		 *    - èƒ½ï¼š è½å­å¹¶æ›´æ”¹ç©å®¶çš„æ£‹å­ç±»å‹
+		 *    - ä¸èƒ½ï¼š ä¸åšå˜åŒ–
+		 *  - ç©å®¶èµ¢äº†å—ï¼Ÿ
+		 *  - æœ‰æ²¡æœ‰å¹³å±€ï¼Ÿ
 		 */
 		if (ChackWin(CurrentPlayerType)) {
 			cout << "Win" << endl; 
-			if (ChackWinCnt == 0) MessageBox(GetHWnd(), _T("Íæ¼Ò»ñÊ¤"), _T("ÓÎÏ·½áÊø"), MB_OK);
+			if (ChackWinCnt == 0) MessageBox(GetHWnd(), _T("ç©å®¶è·èƒœ"), _T("æ¸¸æˆç»“æŸ"), MB_OK);
 			ChackWinCnt++;
 		}
 
 		if (ChackDraw() && !ChackWin(CurrentPlayerType)) {
 			cout << "Draw" << endl;
-			if (ChackDrawCnt == 0) MessageBox(GetHWnd(), _T("ÎŞÍæ¼Ò»ñÊ¤"), _T("ÓÎÏ·½áÊø"), MB_OK);
+			if (ChackDrawCnt == 0) MessageBox(GetHWnd(), _T("æ— ç©å®¶è·èƒœ"), _T("æ¸¸æˆç»“æŸ"), MB_OK);
 			ChackDrawCnt++;
 		}
 
-		// »æÖÆ»­Ãæ
+		// ç»˜åˆ¶ç”»é¢
 		DrawLine();
 		DrawCircle();
 		DrawX();
