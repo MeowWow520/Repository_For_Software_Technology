@@ -1,0 +1,16 @@
+Update Log 
+Latest Version ver.1.02.0  
+
+# ver 1.01.0  
+
+# ver.1.00.0  
+This is the first version of the source code.  
+
+## What's Changed  
+- Organized the principles  
+- Added relatively concise comments  
+
+## Known Issues  
+- Uses multiple `for` loops, resulting in performance waste  
+- There is delayed rendering when the game ends  
+- The end prompt is relatively simple 
