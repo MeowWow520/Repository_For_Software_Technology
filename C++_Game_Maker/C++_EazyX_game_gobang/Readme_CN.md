@@ -15,4 +15,4 @@
 
 原理在各个`source - ver.X.XX.X.cpp`中
 
-查看更新文档请点击 --> [Lastest_CN.log](./Lastest_CN.log)
+查看更新文档请点击 --> [Lastest_CN.log](./Lastest_CN.log) ! 
