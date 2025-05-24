@@ -1,4 +1,4 @@
-# C++_EazyX_game_gobang
+# C++_EazyX_Game_gobang
 
 ![img](https://img.shields.io/badge/Repostitory_For_Software_Technology-8A2BE2) ![img](https://img.shields.io/badge/Lastest%20Update%20Time-2025/05/10-blue) ![img](https://img.shields.io/badge/Author-MeowWow520-pink) ![img](https://img.shields.io/badge/Language-CPP-blue) [![Commits](https://img.shields.io/github/commit-activity/w/MeowWow520/Repository_For_Software_Technology)](https://github.com/MeowWow520/Repository_For_Software_Technology)
 
